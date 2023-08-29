@@ -1,0 +1,383 @@
+<html>
+<head>
+  <title>mimiaumeow</title>
+  <link rel="icon" type="image/x-icon" href="./media/profile/w_blahaj.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+body {
+  background-image: url('./media/profile/wallpaper.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 10px 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-family: monospace;
+  font-weight: 1000;
+  font-size: 20px;
+  opacity: 0.8;
+}
+.title {
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  padding: 10px 20px;
+  outline-width: 3px;
+  outline-color: #D60270;
+  outline-style: solid;
+  width: 120px;
+}
+.title:hover {
+  transform: scale(1.1);
+}
+.clock {
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  padding: 10px 20px;
+  outline-width: 3px;
+  outline-color: #D60270;
+  outline-style: solid;
+}
+.clock:hover {
+  transform: scale(1.1);
+}
+.buttons {
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  padding: 10px 20px;
+  outline-width: 3px;
+  outline-color: #D60270;
+  outline-style: solid;
+  width: 120px;
+  text-align: right;
+}
+.buttons:hover {
+  transform: scale(1.1);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  max-width: 60em;
+  padding: 20px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+}
+.center {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  border-radius: 25px;
+  background-color: #FFFFFF;
+  opacity: 0.8;
+  outline-width: 3px;
+  outline-color: #D60270;
+  outline-style: solid;
+}
+
+.news {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  margin: 30%;
+  margin-bottom: 0;
+  margin-top: 75px;
+  border-radius: 25px;
+  background-color: #FFFFFF;
+  opacity: 0.8;
+  outline-width: 3px;
+  outline-color: #D60270;
+  outline-style: solid;
+}
+.articles {
+  display: none;
+}
+.article {
+  position: relative;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin: 30%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  background-color: #FFFFFF;
+  outline-width: 3px;
+  outline-color: #D60270;
+  outline-style: solid;
+  opacity: 0.8;
+}
+.headline {
+  text-decoration: none;
+  font-family: monospace;
+  font-weight: 1000;
+  font-size: 30px;
+  color: #D60270;
+}
+.headline i:hover{
+  transform: scale(1.1);
+}
+.content {
+  text-decoration: none;
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 20px;
+  color: #D60270;
+}
+hr {
+  border: 1px solid #9B4F96;
+}
+
+
+.pfp {
+  height: 220px;
+  border-radius: 25px;
+}
+
+.links {
+  justify-content: center;
+  max-width: 300px;
+  padding-left: 20px;
+}
+.line {
+  align-items: center;
+  display: flex;
+  padding-bottom: 5px;
+  animation-delay: 200ms;
+}
+.line:hover {
+  transform: scale(1.1);
+}
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-right: 10px;
+  font-size: 20px;
+  color: #D60270;
+}
+i {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+.link {
+  text-decoration: none;
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 20px;
+  color: #D60270;
+}
+
+.bottomright-list {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.bottomright {
+  height: 50;
+  width: 50;
+  margin-right: 10px;
+}
+.bottomright:hover {
+  transform: scale(1.1);
+}
+.bottomleft-list {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.bottomleft {
+  height: 50;
+  width: 50;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.bottomleft:hover {
+  transform: scale(1.1);
+}
+  </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="title">
+            <a href="" style="text-decoration: none;">
+                <span style="color: #D60270">mimiaumeow</span>
+            </a>
+        </div>
+        <div class="clock">
+            <a href="https://account.proton.me/login" style="text-decoration: none;">
+                <span id="currentDateTime" style="color: #D60270">Day, DD. Mon | HH:MM</span>
+            </a>
+        </div>
+        <script>
+            function updateClock() {
+                const currentDate = new Date();
+                const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                const formattedDate = `${days[currentDate.getDay()]}, ${currentDate.getDate()}. ${months[currentDate.getMonth()]} | ${currentDate.getHours().toString().padStart(2, '0')}:${currentDate.getMinutes().toString().padStart(2, '0')}`;
+                document.getElementById('currentDateTime').textContent = formattedDate;
+            }
+            updateClock();
+            setInterval(updateClock, 1000);
+        </script>
+        <div class="buttons">
+            <a href="https://www.unixtimestamp.com/" style="text-decoration: none;"><span style="color: #D60270"><i class="fas fa-clock"></i></span></a>
+            <a href="https://account.proton.me/login" style="text-decoration: none;"><span style="color: #D60270"><i class="fas fa-envelope"></i></span></a>
+        </div>
+    </div>
+<!-- Socials -->
+    <div class="socials">
+    <main>
+        <div class="center">
+            <img src="./media/profile/miau_ready.png" class="pfp">
+            <div class="links">
+                <div class="line">
+                    <div class="icons"><i class="fab fa-discord"></i></div>
+                    <a href="" class="link">@mimiaumeow</a>
+                </div>
+                <div class="line">
+                    <div class="icons"><i class="fab fa-youtube"></i></div>
+                    <a href="https://youtube.com/@mimiaumeow"class="link">@mimiaumeow</a>
+                </div>
+                <div class="line">
+                    <div class="icons"><i class="fab fa-twitch"></i></div>
+                    <a href="https://twitch.tv/mimiaumeow"class="link">@mimiaumeow</a>
+                </div>
+                <div class="line">
+                    <div class="icons"><i class="fab fa-steam"></i></div>
+                    <a href="https://steamcommunity.com/id/mimiaumeow"class="link">@mimiaumeow</a>
+                </div>
+                <div class="line">
+                    <div class="icons"><i class="fas fa-chess-knight"></i></div>
+                    <a href="https://lichess.org/@/mimiaumeow"class="link">@mimiaumeow</a>
+                </div>
+                <div class="line">
+                    <div class="icons"><i class="fas fa-chess-pawn"></i></div>
+                    <a href="https://chess.com/member/mimiaumeow"class="link">@mimiaumeow</a>
+                </div>
+                <div class="line">
+                    <div class="icons"><i class="fas fa-compass"></i></div>
+                    <a href="https://geotastic.net"class="link">@mimiaumeow</a>
+                </div>
+            </div>
+        </div>
+<!-- Introduction -->
+        <div class="center" style="margin-left: 10%">
+            <p class="link">Hi. Im a Catgirl from Germany. I love Tech, Languages, Geography, History and Games. Im a Marxist. Im also autistic. Be honest and friendly and so will I. This is a completely new Account. Love, Mia <3</p>
+        </div>
+    </div>
+    </main>
+
+    <div class="news" id="news">
+        <p class="link"><i class="fas fa-newspaper"></i> News <i class="fas fa-caret-down"></i></p>
+    </div>
+    <div class="articles">
+
+<!-- NEWS -->
+
+<div class="article" id="article-helloworld">
+<h2 class="headline">Hello World! <span style="color: #9B4F96; font-weight: 400; font-size: 15px; float: right;">29.08.2023 | <i class="fas fa-square-share-nodes share-icon" data-article-id="article-helloworld"></i></span></h2>
+<hr>
+<p class="content">
+    Hey Peoples! ^w^<br>
+    Im Mia, this is my first Sign of Life on this new Account.<br>
+    Im almost done building this Website now! I dont know what else to add, except for Stuff that I cant set up yet anyway. Who knows.<br>
+    Well, we will see us in the Future! meow :3
+</p>
+</div>
+
+<!--      -->
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const newsDiv = document.getElementById("news");
+            const caretIcon = document.querySelector(".fas.fa-caret-down");
+            const articlesDiv = document.querySelector(".articles");
+            let articlesVisible = false;
+            newsDiv.addEventListener("click", function () {
+                if (!articlesVisible) {
+                    articlesDiv.style.display = "block";
+                    caretIcon.classList.replace("fa-caret-down", "fa-caret-up");
+                } else {
+                    articlesDiv.style.display = "none";
+                    caretIcon.classList.replace("fa-caret-up", "fa-caret-down");
+                }
+                articlesVisible = !articlesVisible;
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.location.hash) {
+                const targetID = window.location.hash.substring(1);
+                const targetElement = document.getElementById(targetID);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: "smooth" });
+                    if (targetElement.classList.contains("article")) {
+                        const newsDiv = document.getElementById("news");
+                        const caretIcon = document.querySelector(".fas.fa-caret-down");
+                        const articlesDiv = document.querySelector(".articles");
+                        articlesDiv.style.display = "block";
+                        caretIcon.classList.replace("fa-caret-down", "fa-caret-up");
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const shareIcons = document.querySelectorAll(".share-icon");
+            shareIcons.forEach(function (shareIcon) {
+                shareIcon.addEventListener("click", function () {
+                    const articleId = this.getAttribute("data-article-id");
+                    const articleElement = document.getElementById(articleId);
+                    if (articleElement) {
+                        const articleLink = window.location.href.split("#")[0] + "#" + articleId;
+                        const tempInput = document.createElement("input");
+                        tempInput.value = articleLink;
+                        document.body.appendChild(tempInput);
+                        tempInput.select();
+                        document.execCommand("copy");
+                        document.body.removeChild(tempInput);
+                        alert("Link copied: " + articleLink);
+                    }
+                });
+            });
+        });
+    </script>
+
+<!-- MUSIC -->
+    <div class="bottomright-list">
+        <img src="./media/flags/ddr.png" alt="Image" class="bottomright">
+        <img src="./media/flags/ussrtrans.png" alt="Image" class="bottomright">
+        <img src="./media/flags/ancom.png" alt="Image" class="bottomright">
+        <img src="./media/flags/anqueer.png" alt="Image" class="bottomright">
+        <img src="./media/flags/pacifism.png" alt="Image" class="bottomright">
+    </div>
+    <div class="bottomleft-list">
+        <img src="./media/profile/w_fist.png" alt="Image" class="bottomleft">
+        <img src="./media/profile/w_kpd.png" alt="Image" class="bottomleft">
+        <img src="./media/profile/w_handshake.png" alt="Image" class="bottomleft">
+        <img src="./media/profile/w_tbh.png" alt="Image" class="bottomleft">
+        <img src="./media/profile/w_blahaj.png" alt="Image" class="bottomleft">
+    </div>
+</body>
+</html>

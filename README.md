@@ -1,2 +1,2 @@
 # mimiaumeow.github.io
-Website
+Temporary Github Pages Website | I will delete this once I have my own Server set up.

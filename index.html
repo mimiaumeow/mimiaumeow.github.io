@@ -5,10 +5,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
 body {
-  background-image: url('./media/move_heart.gif');
-  #background-repeat: no-repeat;
-  background-attachment: fixed;
-  #background-size: cover;
+  background-color: #1e1e2e;
+  #background-image: url('./media/move_heart.gif');
+  #Hbackground-repeat: no-repeat;
+  #background-attachment: fixed;
+  #Hbackground-size: cover;
+}
+span {
+    color: #cba6f7;
 }
 
 .nav {
@@ -26,11 +30,11 @@ body {
   opacity: 0.8;
 }
 .title {
-  background-color: #FFFFFF;
+  background-color: #313244;
   border-radius: 50px;
   padding: 10px 20px;
   outline-width: 3px;
-  outline-color: #D60270;
+  outline-color: #cba6f7;
   outline-style: solid;
   width: 120px;
 }
@@ -38,22 +42,22 @@ body {
   transform: scale(1.1);
 }
 .clock {
-  background-color: #FFFFFF;
+  background-color: #313244;
   border-radius: 50px;
   padding: 10px 20px;
   outline-width: 3px;
-  outline-color: #D60270;
+  outline-color: #cba6f7;
   outline-style: solid;
 }
 .clock:hover {
   transform: scale(1.1);
 }
 .buttons {
-  background-color: #FFFFFF;
+  background-color: #313244;
   border-radius: 50px;
   padding: 10px 20px;
   outline-width: 3px;
-  outline-color: #D60270;
+  outline-color: #cba6f7;
   outline-style: solid;
   width: 120px;
   text-align: right;
@@ -65,15 +69,8 @@ body {
 main {
   display: flex;
   justify-content: center;
-  flex-direction: row;
   width: 100%;
-  max-width: 60em;
   padding: 20px;
-}
-
-.socials {
-  display: flex;
-  justify-content: center;
 }
 .center {
   position: relative;
@@ -81,75 +78,25 @@ main {
   justify-content: space-evenly;
   padding: 20px;
   border-radius: 25px;
-  background-color: #FFFFFF;
-  opacity: 0.8;
-  outline-width: 3px;
-  outline-color: #D60270;
-  outline-style: solid;
   min-width: 440px
 }
-
-.news {
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 20px;
-  margin: 30%;
-  margin-bottom: 0;
-  margin-top: 75px;
-  border-radius: 25px;
-  background-color: #FFFFFF;
-  opacity: 0.8;
-  outline-width: 3px;
-  outline-color: #D60270;
-  outline-style: solid;
-}
-.articles {
-  display: none;
-}
-.article {
-  position: relative;
-  justify-content: center;
-  padding: 20px;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  margin: 30%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 25px;
-  background-color: #FFFFFF;
-  outline-width: 3px;
-  outline-color: #D60270;
-  outline-style: solid;
-  opacity: 0.8;
-}
-.headline {
-  text-decoration: none;
-  font-family: monospace;
-  font-weight: 1000;
-  font-size: 30px;
-  color: #D60270;
-}
-.headline i:hover{
-  transform: scale(1.3);
-}
-.content {
-  text-decoration: none;
-  font-family: monospace;
-  font-weight: 500;
-  font-size: 20px;
-  color: #D60270;
-}
-hr {
-  border: 1px solid #9B4F96;
-}
-
-
 .pfp {
   height: 250px;
   border-radius: 25px;
 }
-
+.socials {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  border-radius: 25px;
+  background-color: #313244;
+  opacity: 0.8;
+  outline-width: 3px;
+  outline-color: #cba6f6;
+  outline-style: solid;
+  min-width: 440px
+}
 .links {
   justify-content: center;
   max-width: 300px;
@@ -171,7 +118,7 @@ hr {
   text-align: center;
   padding-right: 10px;
   font-size: 20px;
-  color: #D60270;
+  color: #cba6f7;
 }
 i {
   width: 20px;
@@ -183,7 +130,7 @@ i {
   font-family: monospace;
   font-weight: 500;
   font-size: 20px;
-  color: #D60270;
+  color: #cba6f7;
 }
 
 .bottomright-list {
@@ -219,12 +166,12 @@ i {
     <div class="nav">
         <div class="title">
             <a href="" style="text-decoration: none;">
-                <span style="color: #D60270">mimiaumeow</span>
+                <span>mimiaumeow</span>
             </a>
         </div>
         <div class="clock">
             <a href="https://account.proton.me/login" style="text-decoration: none;">
-                <span id="currentDateTime" style="color: #D60270">Day, DD. Mon | HH:MM</span>
+                <span id="currentDateTime">Day, DD. Mon | HH:MM</span>
             </a>
         </div>
         <script>
@@ -239,17 +186,19 @@ i {
             setInterval(updateClock, 1000);
         </script>
         <div class="buttons">
-            <a href="gendertron5000.html" style="text-decoration: none;"><span style="color: #D60270"><i class="fa-solid fa-venus"></i></span></a>
-            <a href="https://www.unixtimestamp.com" style="text-decoration: none;"><span style="color: #D60270"><i class="fas fa-clock"></i></span></a>
-            <a href="https://github.com/mimiaumeow/mimiaumeow.github.io" style="text-decoration: none;"><span style="color: #D60270"><i class="fab fa-github"></i></span></a>
-            <a href="https://account.proton.me/login" style="text-decoration: none;"><span style="color: #D60270"><i class="fas fa-envelope"></i></span></a>
+            <a href="gendertron5000.html" style="text-decoration: none;"><span><i class="fa-solid fa-venus"></i></span></a>
+            <a href="https://www.unixtimestamp.com" style="text-decoration: none;"><span><i class="fas fa-clock"></i></span></a>
+            <a href="https://github.com/mimiaumeow/mimiaumeow.github.io" style="text-decoration: none;"><span><i class="fab fa-github"></i></span></a>
+            <a href="https://account.proton.me/login" style="text-decoration: none;"><span><i class="fas fa-envelope"></i></span></a>
         </div>
     </div>
+<!-- PFP -->
+    <div class="center">
+        <img src="./media/mimiaumeowpfp.png" class="pfp">
+    </div>
 <!-- Socials -->
-    <div class="socials">
     <main>
-        <div class="center">
-            <img src="./media/mimiaumeowpfp.png" class="pfp">
+        <div class="socials">
             <div class="links">
                 <div class="line">
                     <div class="icons"><i class="fab fa-discord"></i></div>
@@ -257,155 +206,63 @@ i {
                 </div>
                 <div class="line">
                     <div class="icons"><i class="fab fa-youtube"></i></div>
-                    <a href="https://youtube.com/@mimiaumeow"class="link">@mimiaumeow</a>
+                    <a href="https://youtube.com/@mimiaumeow" class="link">@mimiaumeow</a>
                 </div>
                 <div class="line">
                     <div class="icons"><i class="fab fa-twitch"></i></div>
-                    <a href="https://twitch.tv/mimiaumeow"class="link">@mimiaumeow</a>
-                </div>
-                <div class="line">
-                    <div class="icons"><i class="fab fa-tiktok"></i></div>
-                    <a href="https://tiktok.com/@mimiaumeow"class="link">@mimiaumeow</a>
-                </div>
-                <div class="line">
-                    <div class="icons"><i class="fab fa-steam"></i></div>
-                    <a href="https://steamcommunity.com/id/mimiaumeow"class="link">@mimiaumeow</a>
+                    <a href="https://twitch.tv/mimiaumeow" class="link">@mimiaumeow</a>
                 </div>
                 <div class="line">
                     <div class="icons"><i class="fas fa-chess-knight"></i></div>
-                    <a href="https://lichess.org/@/mimiaumeow"class="link">@mimiaumeow</a>
+                    <a href="https://lichess.org/@/mimiaumeow" class="link">@mimiaumeow</a>
                 </div>
                 <div class="line">
                     <div class="icons"><i class="fas fa-chess-pawn"></i></div>
-                    <a href="https://chess.com/member/mimiaumeow"class="link">@mimiaumeow</a>
+                    <a href="https://chess.com/member/mimiaumeow" class="link">@mimiaumeow</a>
                 </div>
                 <div class="line">
                     <div class="icons"><i class="fas fa-compass"></i></div>
-                    <a href="https://geotastic.net"class="link">@mimiaumeow</a>
+                    <a href="https://geotastic.net" class="link">@mimiaumeow</a>
+                </div>
+                <div class="line">
+                    <div class="icons"><i class="fas fa-cube"></i></div>
+                    <a href="https://minecraft.net" class="link">@mimiaumeow</a>
+                </div>
+                <div class="line">
+                    <div class="icons"><i class="fas fa-baseball"></i></div>
+                    <a href="https://pokemmo.com" class="link">@mimiaumeow</a>
+                </div>
+                <div class="line">
+                    <div class="icons"><i class="fas fa-baseball"></i></div>
+                    <a href="https://forum.pokeforce.org/members/mimiaumeow.1509" class="link">@mimiaumeow</a>
+                </div>
+                <div class="line">
+                    <div class="icons"><i class="fab fa-steam"></i></div>
+                    <a href="https://steamcommunity.com/id/mimiaumeow" class="link">@mimiaumeow</a>
+                </div>
+                <div class="line">
+                    <div class="icons"><i class="fas fa-desktop"></i></div>
+                    <a href="https://store.epicgames.com" class="link">@mimiaumeow</a>
+                </div>
+                <div class="line">
+                    <div class="icons"><i class="fas fa-desktop"></i></div>
+                    <a href="https://ea.com" class="link">@mimiaumeow</a>
+                </div>
+                <div class="line">
+                    <div class="icons"><i class="fab fa-battle-net"></i></div>
+                    <a href="https://eu.shop.battle.net/en-us/product/warcraft-iii-reforged" class="link">@mimiaumeow#2462</a>
+                </div>
+                <div class="line">
+                    <div class="icons"><i class="fas fa-gamepad"></i></div>
+                    <a href="https://store.nintendo.de/de/splatoon-3" class="link">SW-2963-0700-2709</a>
                 </div>
             </div>
         </div>
-<!-- Introduction -->
-        <div class="center" style="margin-left: 10%">
-		<p class="content">Hi!<br>I love Tech, Languages, Geography, History and Games. Im a Marxist.<br>Im also autistic. Be honest and friendly and so will I.<br>This is a completely new Account.<br>Long live Rosa Luxemburg!<br><span style="opacity: 0;">........................</span>Love, Mia <3</p>
-        </div>
-    </div>
     </main>
-
-    <div class="news" id="news">
-        <p class="link"><i class="fas fa-newspaper"></i> Posts <i class="fas fa-caret-down"></i></p>
-    </div>
-    <div class="articles">
-<!-- Pin: GAMES -->
-<div class="article" id="games">
-<h2 class="headline">📌 GAMES <span style="color: #9B4F96; font-weight: 400; font-size: 15px; float: right;">pinned | <i class="fas fa-square-share-nodes share-icon" data-article-id="games"></i></span></h2>
-<hr>
-<p class="content">
-    If you want to play Games with me, add me on Steam. I play most of my Games there.<br>
-    I also play Chess on Lichess & Chess.com and Geotastic a lot.<br>
-    All of these are all already linked.</p>
-<hr><p class="content">
-    I occasionally play Splatoon on my Switch:<br>
-    - Friend Code: SW-2963-0700-2709 <br>
-    - In-Game Tag: Mia ☆∞#2342 <br>
-    (I have more Switch Games but I play them all on my Steam Deck.)<br><br>
-
-    Sometimes I play PokeMMO:<br>
-    - mimiaumeow <br><br>
-
-    I play Minecraft too, mostly on Java:<br>
-    - mimiaumeow <br><br>
-
-  Some of my Games are on Epic:<br>
-    - mimiaumeow </p>
-<hr><p class="content">
-    Dont be afraid to send me a Friend Request, I will usually accept!
-</p>
-</div>
-
-<!-- NEWS -->
-
-<div class="article" id="gendertron">
-<h2 class="headline">GENDERTRON 5000! <span style="color: #9B4F96; font-weight: 400; font-size: 15px; float: right;">23.11.2023 | <i class="fas fa-square-share-nodes share-icon" data-article-id="gendertron"></i></span></h2>
-<hr>
-<p class="content">
-    Ich habe heute den Gendertron 5000 programmiert, der die politisch-korrekte Sprache für euch übernimmt! Viel Spaß!</p>
-<hr><p class="content"><a href="gendertron5000.html" class="content" style="margin-bottom: 10px;">
-    <i>→ Hier gehts zum Gendertron! (link)</i><br>
-</a></p>
-</div>
-
-<!--      -->
-
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const newsDiv = document.getElementById("news");
-            const caretIcon = document.querySelector(".fas.fa-caret-down");
-            const articlesDiv = document.querySelector(".articles");
-            let articlesVisible = false;
-            newsDiv.addEventListener("click", function () {
-                if (!articlesVisible) {
-                    articlesDiv.style.display = "block";
-                    caretIcon.classList.replace("fa-caret-down", "fa-caret-up");
-                } else {
-                    articlesDiv.style.display = "none";
-                    caretIcon.classList.replace("fa-caret-up", "fa-caret-down");
-                }
-                articlesVisible = !articlesVisible;
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            if (window.location.hash) {
-                const targetID = window.location.hash.substring(1);
-                const targetElement = document.getElementById(targetID);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: "smooth" });
-                    if (targetElement.classList.contains("article")) {
-                        const newsDiv = document.getElementById("news");
-                        const caretIcon = document.querySelector(".fas.fa-caret-down");
-                        const articlesDiv = document.querySelector(".articles");
-                        articlesDiv.style.display = "block";
-                        caretIcon.classList.replace("fa-caret-down", "fa-caret-up");
-                    }
-                }
-            }
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const shareIcons = document.querySelectorAll(".share-icon");
-            shareIcons.forEach(function (shareIcon) {
-                shareIcon.addEventListener("click", function () {
-                    const articleId = this.getAttribute("data-article-id");
-                    const articleElement = document.getElementById(articleId);
-                    if (articleElement) {
-                        const articleLink = window.location.href.split("#")[0] + "#" + articleId;
-                        const tempInput = document.createElement("input");
-                        tempInput.value = articleLink;
-                        document.body.appendChild(tempInput);
-                        tempInput.select();
-                        document.execCommand("copy");
-                        document.body.removeChild(tempInput);
-                        alert("Link copied: " + articleLink);
-                    }
-                });
-            });
-        });
-    </script>
-
-<!-- MUSIC -->
+<!-- LINKS -->
     <div class="bottomright-list">
-	<img src="./media/proletmonth_progress_flagge.png" alt="Image" class="bottomright">
-        <img src="./media/anqueer.png" alt="Image" class="bottomright">
-	<a href="https://www.change.org/p/manifest-f%C3%BCr-frieden"><img src="./media/pacifism.png" alt="Image" class="bottomright"></a>
-    </div>
-    <div class="bottomleft-list">
-        <img src="./media/w_kpd.png" alt="Image" class="bottomleft">
-        <img src="./media/w_handshake.png" alt="Image" class="bottomleft">
-	<img src="./media/w_fist.png" alt="Image" class="bottomleft">
+        <a href="https://discord.gg/GHUzkEatcH"><img src="./media/proletmonth_progress_flagge.png" alt="Image" class="bottomright"></a>
+        <a href="https://www.change.org/p/manifest-f%C3%BCr-frieden"><img src="./media/pacifism.png" alt="Image" class="bottomright"></a>
     </div>
 </body>
 </html>

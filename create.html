@@ -1,0 +1,207 @@
+<html>
+<head>
+  <title>mimiaumeow</title>
+  <link rel="icon" type="image/x-icon" href="./media/w_fist.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+body {
+  background-color: #1e1e2e;
+  #background-image: url('./media/move_heart.gif');
+  #Hbackground-repeat: no-repeat;
+  #background-attachment: fixed;
+  #Hbackground-size: cover;
+}
+span {
+    color: #cba6f7;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 10px 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-family: monospace;
+  font-weight: 1000;
+  font-size: 20px;
+  opacity: 0.8;
+}
+.title {
+  background-color: #313244;
+  border-radius: 50px;
+  padding: 10px 20px;
+  outline-width: 3px;
+  outline-color: #cba6f7;
+  outline-style: solid;
+  width: 120px;
+}
+.title:hover {
+  transform: scale(1.1);
+}
+.clock {
+  background-color: #313244;
+  border-radius: 50px;
+  padding: 10px 20px;
+  outline-width: 3px;
+  outline-color: #cba6f7;
+  outline-style: solid;
+}
+.clock:hover {
+  transform: scale(1.1);
+}
+.buttons {
+  background-color: #313244;
+  border-radius: 50px;
+  padding: 10px 20px;
+  outline-width: 3px;
+  outline-color: #cba6f7;
+  outline-style: solid;
+  width: 120px;
+  text-align: right;
+}
+.buttons:hover {
+  transform: scale(1.1);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+.center {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 25px;
+  min-width: 440px
+}
+.field {
+  position: relative;
+  padding: 20px;
+  border-radius: 25px;
+  background-color: #313244;
+  opacity: 0.8;
+  outline-width: 3px;
+  outline-color: #cba6f6;
+  outline-style: solid;
+  min-width: 440px
+}
+.text {
+  text-decoration: none;
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 20px;
+  color: #cba6f7;
+}
+#code {
+  font-family: monospace;
+  padding-left: 3px;
+  padding-right: 3px;
+  border: 2px solid black;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+  </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="title">
+            <a href="index.html" style="text-decoration: none;">
+                <span>mimiaumeow</span>
+            </a>
+        </div>
+        <div class="clock">
+            <a style="text-decoration: none;">
+                <span id="currentDateTime">Day, DD. Mon | HH:MM</span>
+            </a>
+        </div>
+        <script>
+            function updateClock() {
+                const currentDate = new Date();
+                const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                const formattedDate = `${days[currentDate.getDay()]}, ${currentDate.getDate()}. ${months[currentDate.getMonth()]} | ${currentDate.getHours().toString().padStart(2, '0')}:${currentDate.getMinutes().toString().padStart(2, '0')}`;
+                document.getElementById('currentDateTime').textContent = formattedDate;
+            }
+            updateClock();
+            setInterval(updateClock, 1000);
+        </script>
+    </div>
+<!-- CREATE INTRO -->
+    <main>
+        <div class="field">
+            <p class="text"><b>CREATE!</b><br>
+            <i>WORK IN PROGRESS!</i><br>
+            On this page I want to help you build and eventually self-host your own stuff.<br>
+            We are trusting a few corrupt individuals with our data and control over our day-to-day life.<br>
+            Take back control, decentralize the web, liberate yourself!</p>
+        </div>
+    </main>
+<!-- CREATE: BADGES -->
+    <main>
+        <div class="field">
+            <p class="text"><b>Badges 80x15</b><br>
+            Add my badges to your website <i>(or anywhere, really)</i><br>
+            Save the image and copy-paste the snippet.<br>
+            You might have to change the path.</p>
+        </div>
+    </main>
+    <div class="center">
+        <p id="code">&lt;a href="https://mimiaumeow.github.io/"&gt;&lt;img alt="mimiaumeow" src="badge-mimiaumeow.png"&gt;&lt;/a&gt;</p>
+    </div>
+    <div class="center">
+        <img style="width: 240px; height: 45px;" src="./media/badge-mimiaumeow.png">
+    </div>
+    <div class="center">
+        <p id="code">&lt;a href="https://discord.gg/GHUzkEatcH"&gt;&lt;img alt="PROLETOPIA" src="badge-prole.png"&gt;&lt;/a&gt;</p>
+    </div>
+    <div class="center">
+        <img style="width: 240px; height: 45px;" src="./media/badge-prole.png">
+    </div>
+    <div class="center">
+        <p id="code">&lt;a href="https://www.change.org/p/manifest-f%C3%BCr-frieden"&gt;&lt;img alt="FRIEDEN" src="badge-frieden.png"&gt;&lt;/a&gt;</p>
+    </div>
+    <div class="center">
+        <img style="width: 240px; height: 45px;" src="./media/badge-frieden.png">
+    </div>
+    <div class="center">
+        <p id="code">&lt;a href="http://www.ll-demo.de/"&gt;&lt;img alt="KPD | Rosa · Karl 1919" src="badge-ll.png"&gt;&lt;/a&gt;</p>
+    </div>
+    <div class="center">
+        <img style="width: 240px; height: 45px;" src="./media/badge-ll.png">
+    </div>
+    <div class="center">
+        <p id="code">&lt;a href="https://www.raspberrypi.com/products/raspberry-pi-4-model-b/"&gt;&lt;img alt="Powered by Raspberry Pi 4B" src="badge-pi.png"&gt;&lt;/a&gt;</p>
+    </div>
+    <div class="center">
+        <img style="width: 240px; height: 45px;" src="./media/badge-pi.png">
+    </div>
+    <div class="center">
+        <p id="code">&lt;a href="https://www.debian.org/"&gt;&lt;img alt="Debian" src="badge-debian.png"&gt;&lt;/a&gt;</p>
+    </div>
+    <div class="center">
+        <img style="width: 240px; height: 45px;" src="./media/badge-debian.png">
+    </div>
+    <div class="center">
+        <p id="code">&lt;a href="https://archlinux.org/"&gt;&lt;img alt="Arch BTW" src="badge-arch.png"&gt;&lt;/a&gt;</p>
+    </div>
+    <div class="center">
+        <img style="width: 240px; height: 45px;" src="./media/badge-arch.png">
+    </div>
+    <div class="center">
+        <p id="code">&lt;a href="https://nixos.org/"&gt;&lt;img alt="NixOS" src="badge-nix.png"&gt;&lt;/a&gt;</p>
+    </div>
+    <div class="center">
+        <img style="width: 240px; height: 45px;" src="./media/badge-nix.png">
+    </div>
+<!-- BADGES -->
+    <div style="margin-left: 25%; margin-right: 25%;">
+      <hr style="color: #cba6f6;">
+      <a href="https://mimiaumeow.github.io/"><img alt="" src="./media/badge-mimiaumeow.png"></a><!--links--><a href="https://discord.gg/GHUzkEatcH"><img alt="" src="./media/badge-prole.png"></a><a href="https://www.change.org/p/manifest-f%C3%BCr-frieden"><img alt="" src="./media/badge-frieden.png"></a><a href="http://www.ll-demo.de/"><img alt="" src="./media/badge-ll.png"></a><!--tech--><a href="https://www.raspberrypi.com/products/raspberry-pi-4-model-b/"><img alt="" src="./media/badge-pi.png"></a><a href="https://www.debian.org/"><img alt="" src="./media/badge-debian.png"></a><a href="https://archlinux.org/"><img alt="" src="./media/badge-arch.png"></a><a href="https://nixos.org/"><img alt="" src="./media/badge-nix.png"></a>
+    </div>
+</body>
+</html>

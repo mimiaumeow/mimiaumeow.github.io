@@ -1,0 +1,16 @@
+<rss version="2.0">
+<channel>
+  <title>mimiaumeow</title>
+  <link>https://mimiaumeow.github.io</link>
+  <description>mimiaumeow</description>
+
+  <item>
+    <title>RSS Feed</title>
+    <link>https://mimiaumeow.github.io/self-hosting-guide.html</link>
+    <guid>https://mimiaumeow.github.io/self-hosting-guide.html</guid>
+    <description>RSS Feed</description>
+    <pubDate>Tue, 11 Jun 2024 00:00:00 +0100</pubDate>
+  </item>
+
+</channel>
+</rss>
